@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>10</div>
+    <button>Stop</button>
+
+
+    <script>
+        var div=document.querySelector("div");
+        var btn=document.querySelector("button");
+
+        function count(){
+
+            if(div.textContent<=0){
+                clearInterval(time);
+                window.location="https://www.w3schools.com/html/"
+
+            }
+            else{
+            div.textContent=div.textContent-1}
+
+
+        }
+        btn.onclick=function(){
+            clearInterval(time)
+        }
+      
+       var time= setInterval(count,1000)
+
+        </script>
+</body>
+</html>
